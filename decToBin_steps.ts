@@ -25,5 +25,9 @@ function decToBinSteps(num: number): void {
 		bits = rem + bits;
 	}
 
-	console.log(magenta(`${original} = ${bits}`));
+	console.log(
+		`${magenta(`${original} = ${bits}`)}\nVerification: ${magenta(
+			parseInt(bits, 2)
+		)}`
+	);
 }

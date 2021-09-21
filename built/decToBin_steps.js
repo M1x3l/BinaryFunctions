@@ -16,5 +16,5 @@ function decToBinSteps(num) {
         console.log(cli_color_1.cyan(("" + num).padEnd(numLength, ' ')) + " / 2   = " + cli_color_1.green(("" + (num = Math.floor(num / 2))).padEnd(numLength, ' ')) + " R: " + cli_color_1.green("" + rem));
         bits = rem + bits;
     }
-    console.log(cli_color_1.magenta(original + " = " + bits));
+    console.log(cli_color_1.magenta(original + " = " + bits) + "\nVerification: " + cli_color_1.magenta(parseInt(bits, 2)));
 }
