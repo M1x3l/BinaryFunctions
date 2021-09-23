@@ -45,7 +45,6 @@ rl.question('1 > ', function (param0) {
         var output = new Array(maxLength + 1).fill(0);
         for (var i = 0; i < output.length; i++) {
             var _b = __spreadArrays(getDigitsInCol(numbers, i), [carry[i - 1] || 0]), n1 = _b[0], n2 = _b[1], n3 = _b[2];
-            console.log(n1, n2, n3);
             output[i] = n1 + n2 + n3 != 2 ? 1 : 0;
         }
         console.log();

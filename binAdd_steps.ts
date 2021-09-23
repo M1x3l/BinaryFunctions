@@ -42,7 +42,6 @@ rl.question('1 > ', (param0) => {
 		const output = new Array(maxLength + 1).fill(0);
 		for (let i = 0; i < output.length; i++) {
 			const [n1, n2, n3] = [...getDigitsInCol(numbers, i), carry[i - 1] || 0];
-			console.log(n1, n2, n3);
 			output[i] = n1 + n2 + n3 != 2 ? 1 : 0;
 		}
 
