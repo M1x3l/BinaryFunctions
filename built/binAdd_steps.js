@@ -54,7 +54,7 @@ rl.question('1 > ', function (param0) {
             carry.reverse().join(''),
             output.reverse().join(''),
         ], n1Str = _c[0], n2Str = _c[1], carryStr = _c[2], outputStr = _c[3];
-        console.log((" " + n1Str + " " + cli_color_1.green("= " + parseInt(n1Str, 2)) + "\n\t\t\t+" + n2Str + " " + cli_color_1.green("= " + parseInt(n2Str, 2)) + "\n\t\t\t " + carryStr + "\n\t\t\t" + '—'.repeat(maxLength + 2) + "\n\t\t\t " + outputStr + " " + cli_color_1.green("= " + parseInt(outputStr, 2))).replace(/\t/g, ''));
+        console.log((" " + n1Str + " " + cli_color_1.green("= " + parseInt(n1Str, 2)) + "\n\t\t\t+" + n2Str + " " + cli_color_1.green("= " + parseInt(n2Str, 2)) + "\n\t\t\t " + cli_color_1.magenta(carryStr) + "\n\t\t\t" + '—'.repeat(maxLength + 2) + "\n\t\t\t " + outputStr + " " + cli_color_1.green("= " + parseInt(outputStr, 2))).replace(/\t/g, ''));
         process.exit();
     });
 });

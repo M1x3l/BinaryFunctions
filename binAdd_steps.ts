@@ -1,4 +1,4 @@
-import { green } from 'cli-color';
+import { green, magenta } from 'cli-color';
 import { createInterface as readline } from 'readline';
 const rl = readline({ input: process.stdin, output: process.stdout });
 
@@ -57,7 +57,7 @@ rl.question('1 > ', (param0) => {
 		console.log(
 			` ${n1Str} ${green(`= ${parseInt(n1Str, 2)}`)}
 			+${n2Str} ${green(`= ${parseInt(n2Str, 2)}`)}
-			 ${carryStr}
+			 ${magenta(carryStr)}
 			${'—'.repeat(maxLength + 2)}
 			 ${outputStr} ${green(`= ${parseInt(outputStr, 2)}`)}`.replace(/\t/g, '')
 		);
