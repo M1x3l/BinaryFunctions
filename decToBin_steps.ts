@@ -1,9 +1,21 @@
 import { cyan, green, magenta } from 'cli-color';
 import { createInterface as readline } from 'readline';
 
+const [_, _file, n0] = process.argv;
+
+if (n0) {
+	if (/[^\d]/.test(n0)) process.exit(-1);
+	decToBinSteps(parseInt(n0));
+	process.exit();
+}
+
 const rl = readline({ input: process.stdin, output: process.stdout });
 
 rl.question('> ', (answer) => {
+	if (/[^\d]/.test(n0)) {
+		console.log(`${answer} is not a decimal number`);
+		process.exit();
+	}
 	decToBinSteps(parseInt(answer));
 	process.exit();
 });

@@ -2,8 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var cli_color_1 = require("cli-color");
 var readline_1 = require("readline");
+var _a = process.argv, _ = _a[0], _file = _a[1], n0 = _a[2];
+if (n0) {
+    if (/[^\d]/.test(n0))
+        process.exit(-1);
+    decToBinSteps(parseInt(n0));
+    process.exit();
+}
 var rl = readline_1.createInterface({ input: process.stdin, output: process.stdout });
 rl.question('> ', function (answer) {
+    if (/[^\d]/.test(n0)) {
+        console.log(answer + " is not a decimal number");
+        process.exit();
+    }
     decToBinSteps(parseInt(answer));
     process.exit();
 });
